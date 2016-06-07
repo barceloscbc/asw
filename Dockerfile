@@ -9,4 +9,10 @@ RUN apt-get update && \
     apt-get update && \
     echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
     apt-get install -y oracle-java8-installer && \
-    apt-get clean
+    apt-get clean && \
+    apt-get install -y maven
+    
+# Prepare by downloading dependencies
+ADD pom.xml /pom.xml  
+RUN ["mvn", "dependency:resolve"]  
+RUN ["mvn", "verify"]
