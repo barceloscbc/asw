@@ -3,10 +3,10 @@ MAINTAINER Cleber Barcelos <barcelos.cbc@gmail.com>
 
 LABEL Description="Modelo de maquina com java8 e node" Vendor="ASW Puc Minas OF05 " Version="1.0"
 
-RUN --cap-add=NET_ADMIN && \
-	apt-get update && \
+RUN apt-get update && \
 	apt-get install iputils-ping &&\
-	apt-get install iptables &&\
+	apt-get install iptables && \
+	apt-get install -y openssh-server && \
 	#########################################
 	## Instalação e configuralção do Java 8
 	#########################################
@@ -31,4 +31,3 @@ RUN --cap-add=NET_ADMIN && \
 	echo "mysql-server-5.5 mysql-server/root_password password root" | debconf-set-selections && \
 	echo "mysql-server-5.5 mysql-server/root_password_again password root" | debconf-set-selections && \
 	apt-get install -y mysql-server
-	
