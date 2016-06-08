@@ -4,8 +4,8 @@ MAINTAINER Cleber Barcelos <barcelos.cbc@gmail.com>
 LABEL Description="Modelo de maquina com java8 e node" Vendor="ASW Puc Minas OF05 " Version="1.0"
 
 RUN apt-get update && \
-	apt-get install iputils-ping &&\
-	apt-get install iptables && \
+	apt-get install -y iputils-ping &&\
+	apt-get install -y iptables && \
 	apt-get install -y openssh-server && \
 	#########################################
 	## Instalação e configuralção do Java 8
