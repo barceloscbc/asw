@@ -19,7 +19,7 @@ RUN apt-get update && \
 	#########################################
 	## Instalação e configuração do NodeJS
 	#########################################
-	apt-get install nodejs && \
-	sudo apt-get install npm && \
+	apt-get -y install nodejs && \
+	apt-get -y install npm && \
 	ln -s /usr/bin/nodejs /usr/bin/node
 	
