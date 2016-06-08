@@ -1,4 +1,4 @@
-FROM      node: 0.10-onbuild
+FROM      node
 MAINTAINER Cleber Barcelos <barcelos.cbc@gmail.com>
 
 LABEL Description="Modelo de maquina com java8 e node" Vendor="ASW Puc Minas OF05 " Version="1.0"
