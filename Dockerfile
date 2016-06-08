@@ -21,5 +21,11 @@ RUN apt-get update && \
 	#########################################
 	apt-get -y install nodejs && \
 	apt-get -y install npm && \
-	ln -s /usr/bin/nodejs /usr/bin/node
+	ln -s /usr/bin/nodejs /usr/bin/node && \
+	#########################################
+	## Instalação e configuração do MySql
+	#########################################
+	echo "mysql-server-5.5 mysql-server/root_password password root" | debconf-set-selections && \
+	echo "mysql-server-5.5 mysql-server/root_password_again password root" | debconf-set-selections && \
+	apt-get install -y mysql-server-5.5
 	
