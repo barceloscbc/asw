@@ -15,3 +15,8 @@ Iniciar o docker e na linha de comando executar conforme instruções abaixo.
 docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi $(docker images -q)
+
+
+## Executar docker external
+
+docker run  --cap-add=NET_ADMIN -i -t --net host of05/asw /bin/bash
