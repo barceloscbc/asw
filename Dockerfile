@@ -22,8 +22,9 @@ RUN apt-get update && \
 	apt-get install -y build-essential checkinstall && \
 	apt-get install -y libssl-dev && \	
 	apt-get install -y curl libcurl3 libcurl3-dev php5-curl && \ 
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh && \
-    bash && \  
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh 
+
+RUN bash && \  
  	nvm install 5.0 && \
 	nvm use 5.0 && \
 	nvm alias default node
