@@ -20,3 +20,8 @@ docker rmi $(docker images -q)
 ## Executar docker external
 
 docker run  --cap-add=NET_ADMIN -i -t --net host of05/asw /bin/bash
+
+
+docker run -p 3001:3000 -p 23:22
+
+docker build -t of05/asw C:\\Projetos\\fontes\\pucminas\\asw
