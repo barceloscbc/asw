@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 MAINTAINER Cleber Barcelos <barcelos.cbc@gmail.com>
-LABEL Description="Banco de Dados MySql" Vendor="ASW Puc Minas OF05" Version="1.0"
+LABEL Description="Banco de Dados MySql " Vendor="ASW Puc Minas OF05" Version="1.0"
 
 # Install latest updates
 RUN apt-get update 
