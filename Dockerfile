@@ -8,7 +8,7 @@ RUN apt-get update && \
 	apt-get install -y iptables && \
 	apt-get install -y openssh-server && \
 	apt-get install -y vim && \
-	apt-get install apache2 apache2-doc apache2-utils && \
+	apt-get install -y apache2 apache2-doc apache2-utils && \
 	#########################################
 	## Instalação e configuralção do Java 8
 	#########################################
