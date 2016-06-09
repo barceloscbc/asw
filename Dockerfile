@@ -2,6 +2,9 @@
 # using debian:jessie for it's smaller size over ubuntu
 FROM debian:jessie
 
+MAINTAINER Cleber Barcelos <barcelos.cbc@gmail.com>
+LABEL Description="Modelo de maquina com java8 e node" Vendor="ASW Puc Minas OF05 " Version="1.0"
+
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
