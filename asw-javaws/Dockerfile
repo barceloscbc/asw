@@ -13,7 +13,9 @@ RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
 ADD src /code/src  
-RUN ["mvn", "package"]
+ 
+ADD build.sh /code/build.sh
+RUN sed -i 's/\r//' /code/build.sh
 
-EXPOSE 4567  
-CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "/code/target/asw-javaws-jar-with-dependencies.jar"] 
+EXPOSE 8080  
+CMD ["./build.sh"] 

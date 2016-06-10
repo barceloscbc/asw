@@ -7,14 +7,18 @@ Para realizar o teste no ambiente completo e necessário baixar o ambiente compl
 ```javascript
 $ docker pull of05/aswdb
 ```
-* 2\. Baixar container de aplicação Angular2
+* 2\. Baixar container de serviço Java WS
+```javascript
+$ docker pull of05/aswws
+```
+* 3\. Baixar container de aplicação Angular2
 ```javascript
 $ docker pull of05/aswangular2
 ```
-
-* 3\. Executar container's
+* 4\. Executar container's
 ```javascript
-$  docker run -d --name aswdp -p  6612:3306 of05/aswdb
+$  docker run -d --name aswdb -p  6612:3306 of05/aswdb
+$  docker run -d --name aswws -p  4567:8080 -e IP_BD=192.168.99.104 -e PORT_BD=6612 of05/aswws
 ```
 
 ## Compilando DockerFile
