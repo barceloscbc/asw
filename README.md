@@ -1,5 +1,5 @@
 # Projeto Final de Analise de Software Web
-
+### Puc Minas - OF05 
 ## Executando ambiente via docker
 Para realizar o teste no ambiente completo e necessário baixar o ambiente completo, abaixo os passo a passo.
 
@@ -14,10 +14,14 @@ $ docker pull of05/aswangular2
 
 * 3\. Executar container's
 ```javascript
-$  docker run -d -p  6612:3306 of05/aswdb
+$  docker run -d --name aswdp -p  6612:3306 of05/aswdb
 ```
 
+## Compilando DockerFile
 
+### Executando
+ 
+ docker run -d --name aswdp -p  6612:3306 of05/aswdb
 
 
 
