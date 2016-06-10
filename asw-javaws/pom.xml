@@ -116,7 +116,7 @@
 							</descriptorRefs>
 							<archive>
 								<manifest>
-									<mainClass>sparkexample.Hello</mainClass>
+									<mainClass>br.of05.asw.Main</mainClass>
 								</manifest>
 							</archive>
 						</configuration>
