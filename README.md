@@ -1,4 +1,34 @@
-# asw
+# Projeto Final de Analise de Software Web
+
+## Executando ambiente via docker
+Para realizar o teste no ambiente completo e necessário baixar o ambiente completo, abaixo os passo a passo.
+
+* 1\. Baixar container de banco Mysql
+```javascript
+$ docker pull of05/aswdb
+```
+* 2\. Baixar container de aplicação Angular2
+```javascript
+$ docker pull of05/aswangular2
+```
+
+* 3\. Executar container's
+```javascript
+$  docker run -d -p  6612:3306 of05/aswdb
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Rodando Docker local
 Iniciar o docker e na linha de comando executar conforme instruções abaixo.
