@@ -1,0 +1,23 @@
+<template bindable="router">
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo truncate">Sistema de Gestão Acadêmica</a>
+            <ul class="right hide-on-med-and-down">
+                <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''} ${row.settings.subMenu? 'dropdown': ''}" >
+                    <a href.bind="row.href" if.bind="!row.settings.subMenu">${row.title}</a>
+                    <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" 
+                       if.bind="row.settings.subMenu">${row.title} <span class="caret"></span>
+                    </a>
+                    <ul if.bind="row.settings.subMenu" class="dropdown-menu" > 
+                        <li repeat.for="menu of row.settings.subMenu">
+                            <a href.bind="menu.href">${menu.title}</a>
+                        </li>
+                    </ul>
+                </li>  
+                
+                <li><a href="#" click.delegate="auth.logout()">Sair</a></li> 
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</template>

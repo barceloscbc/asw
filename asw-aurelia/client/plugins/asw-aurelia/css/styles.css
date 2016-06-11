@@ -1,0 +1,160 @@
+footer-bar {
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+}
+
+footer.page-footer {
+    padding-top: 0px!important;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.login-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+nav li a:hover {
+    text-decoration: none!important;
+    color: inherit;
+}
+
+
+/*********************
+* Social Buttons
+*********************/
+
+body .btn-google-plus {
+    color: #fff;
+    background-color: #dd4b39;
+    border: 1px solid #d54331;
+}
+
+body .btn-google-plus:hover,
+body .btn-google-plus:focus {
+    color: #fff;
+    background-color: #cb3927;
+}
+
+body .btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border: 1px solid #335190;
+}
+
+body .btn-facebook:hover,
+body .btn-facebook:focus {
+    color: #fff;
+    background-color: #294786;
+}
+
+body .btn-linkedin {
+    color: #fff;
+    background-color: #007bb6;
+    border: 1px solid #0073ae;
+}
+
+body .btn-linkedin:hover,
+body .btn-linkedin:focus {
+    color: #fff;
+    background-color: #0069a4;
+}
+
+body .btn-twitter {
+    color: #fff;
+    background-color: #00aced;
+    border: 1px solid #009fdb;
+}
+
+body .btn-twitter:hover,
+body .btn-twitter:focus {
+    color: #fff;
+    background-color: #0090c7;
+}
+
+body .btn-foursquare {
+    color: #fff;
+    background-color: #f94877;
+    border: 1px solid #f8215a;
+}
+
+body .btn-foursquare:hover,
+body .btn-foursquare:focus {
+    color: #fff;
+    background-color: #f71752;
+}
+
+body .btn-github {
+    color: #fff;
+    background-color: #444;
+    border: 1px solid #3b3b3b;
+}
+
+body .btn-github:hover,
+body .btn-github:focus {
+    color: #fff;
+    background-color: #303030;
+}
+
+body .btn-yahoo {
+    color: #fff;
+    background-color: #720e9e;
+    border: 1px solid #580b75;
+}
+
+body .btn-yahoo:hover,
+body .btn-yahoo:focus {
+    color: #fff;
+    background-color: #303030;
+}
+
+body .btn-live {
+    color: #fff;
+    background-color: #2672ec;
+}
+
+body .btn-live:hover,
+body .btn-live:focus {
+    color: #fff;
+    background-color: #125acd;
+}

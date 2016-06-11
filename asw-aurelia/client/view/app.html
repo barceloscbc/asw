@@ -1,0 +1,16 @@
+<template>    
+    <require from='../component/nav-bar'></require>
+    <require from='../component/footer-bar'></require>
+    <nav-bar router.bind="router"></nav-bar>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col s12 m12 32">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer-bar></footer-bar>
+ </template>
