@@ -1,0 +1,24 @@
+{
+    "name": "asw-angular",
+    "version": "1.0.0",
+    "description": "Trabalho final em angularJS",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "run-sequence": "1.2.2",
+        "gulp": "3.9.1",
+        "gulp-ngmin": "^0.3.0",
+        "gulp-clean": "0.3.2",
+        "gulp-sass": "2.3.2",
+        "gulp-sourcemaps":"1.6.0",
+        "materialize-css": "^0.97.6"
+    },
+    "dependencies": {
+        "angular": "^1.5.8",
+        "angular-route": "^1.5.8"
+    }
+}

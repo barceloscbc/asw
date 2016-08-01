@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>F-1 Feeder</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="plugins/materialize-css/css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body ng-app="F1FeederApp" ng-controller="driversController">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Drivers Championship Standings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="driver in driversList">
+                <td>{{$index + 1}}</td>
+                <td>
+                    <img src="img/flags/{{driver.Driver.nationality}}.png" /> {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+                </td>
+                <td>{{driver.Constructors[0].name}}</td>
+                <td>{{driver.points}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="plugins/angular/js/angular.min.js"></script>
+    <script src="plugins/angular-route/js/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script type="text/javascript" src="plugins/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/materialize-css/js/materialize.min.js"></script>
+
+</body>
+
+</html>
