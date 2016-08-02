@@ -11,14 +11,19 @@
     "devDependencies": {
         "run-sequence": "1.2.2",
         "gulp": "3.9.1",
-        "gulp-ngmin": "^0.3.0",
         "gulp-clean": "0.3.2",
-        "gulp-sass": "2.3.2",
-        "gulp-sourcemaps":"1.6.0",
-        "materialize-css": "^0.97.6"
+        "gulp-ruby-sass": "2.0.6",
+        "graceful-fs": "4.1.5"
     },
     "dependencies": {
         "angular": "^1.5.8",
+        "angular-material": "^1.1.0-rc.5",
+        "angular-animate": "1.5.8",
+        "angular-aria": "1.5.8",
         "angular-route": "^1.5.8"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/barceloscbc/asw/tree/master/asw-angular"
     }
 }

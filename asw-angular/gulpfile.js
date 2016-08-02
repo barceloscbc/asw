@@ -1,11 +1,10 @@
 'use strict';
 
-var gulp = require('gulp');
-var ngmin = require('gulp-ngmin');
-var clean = require('gulp-clean');
-var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const clean = require('gulp-clean');
+const runSequence = require('run-sequence');
+const sass = require('gulp-ruby-sass');
+
 
 var bases = {
     app: './src/**/*',
@@ -20,15 +19,13 @@ var bases = {
 
 
 gulp.task('default', function(cb) {
-    runSequence('clean', 'copy', 'sass:watch', cb);
+    runSequence('watch', 'clean', 'copy', 'sass', cb);
 });
 
 /* Realiza copia de arquivos para distribuição */
 gulp.task('copy', function() {
-    /* Compacta arquivos angularJs e copia */
-    gulp.src(bases.app + '.js').pipe(ngmin({ dynamic: true })).pipe(gulp.dest(bases.dist.base));
     /* Copia arquivos staticos para pasta destino */
-    gulp.src(bases.app + '.html').pipe(gulp.dest(bases.dist.base));
+    gulp.src([bases.app + '.html', bases.app + '.js']).pipe(gulp.dest(bases.dist.base));
     /* Copia arquivos de api e framework*/
     /* ############ Angular ########### */
     gulp.src(bases.lib + '/angular/*.min.js').pipe(gulp.dest(bases.dist.plugins + '/angular/js/'));
@@ -49,10 +46,12 @@ gulp.task('clean', function() {
 });
 
 gulp.task('sass', function() {
-    gulp.src(bases.app + '/sass/**/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest(bases.dist.css));
+    sass(bases.app + '.scss')
+        .on('error', sass.logError)
+        .pipe(gulp.dest(bases.dist.css))
 });
-gulp.task('sass:watch', function() {
-    return gulp.watch(bases.app + '/sass/**/*.scss', ['sass']);
+
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+    gulp.watch(bases.app, ['default']);
 });
